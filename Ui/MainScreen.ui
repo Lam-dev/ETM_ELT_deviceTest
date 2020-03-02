@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Frame</class>
+ <widget class="QFrame" name="Frame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow">
+   <enum>QFrame::Raised</enum>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>16</y>
+     <width>67</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>4</y>
+     <width>463</width>
+     <height>189</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QComboBox" name="comboBox_choseConnectForFGPsensor">
+    <property name="geometry">
+     <rect>
+      <x>244</x>
+      <y>4</y>
+      <width>207</width>
+      <height>43</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>UART1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>UART2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>UART3</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>16</y>
+      <width>229</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Kết nối cảm biến vân tay</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_addFGP">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>58</y>
+      <width>125</width>
+      <height>59</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Lấy vân tay </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_forShowFGPnotify">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>130</y>
+      <width>431</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 132, 0);
+font: 75 bold 12pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_findFGP">
+    <property name="geometry">
+     <rect>
+      <x>158</x>
+      <y>58</y>
+      <width>125</width>
+      <height>59</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Thử vân tay</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_deleteFGP">
+    <property name="geometry">
+     <rect>
+      <x>298</x>
+      <y>58</y>
+      <width>125</width>
+      <height>59</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Xóa vân tay</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>4</y>
+     <width>325</width>
+     <height>189</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QComboBox" name="comboBox_chooseTextToSpeech">
+    <property name="geometry">
+     <rect>
+      <x>2</x>
+      <y>2</y>
+      <width>321</width>
+      <height>53</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Xin cảm ơn</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Xin vui lòng thử lại</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_playSpeech">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>72</y>
+      <width>151</width>
+      <height>73</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Phát</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_3">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>196</y>
+     <width>461</width>
+     <height>279</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_forShowCamera">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>10</y>
+      <width>397</width>
+      <height>257</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_4">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>196</y>
+     <width>325</width>
+     <height>279</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>20</y>
+      <width>103</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 127);
+font: 57 bold 18pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>MAC</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_forShowMAC">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>48</y>
+      <width>301</width>
+      <height>47</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(209, 0, 0);
+font: 75 bold 18pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>114</y>
+      <width>117</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 127);
+font: 75 bold 18pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Serial</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_forShowSerial">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>158</y>
+      <width>301</width>
+      <height>47</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(209, 0, 0);
+font: 75 bold 18pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
