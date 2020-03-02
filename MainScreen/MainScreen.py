@@ -8,8 +8,11 @@ from        PIL             import Image, ImageQt
 import      getmac
 from        Sound.OrangePiSound   import Sound
 
-class MainScreen(Ui_Frame):
+class MainScreen(Ui_Frame, QObject):
+    SignalCloseProgram = pyqtSignal()
+
     def __init__(self, Frame):
+        QObject.__init__(self)
         Ui_Frame.__init__(self)
         Ui_Frame.setupUi(self, Frame)
         self.cameraObj = GetImageFromCamera(labelObject = self.label_forShowCamera)
@@ -25,10 +28,14 @@ class MainScreen(Ui_Frame):
         self.pushButton_addFGP.clicked.connect(self.GetAndSaveFGP)
         self.pushButton_findFGP.clicked.connect(self.FindFGP)
         self.pushButton_deleteFGP.clicked.connect(self.DeleteFGP)
+        self.pushButton_close.clicked.connect(self.CloseProgram)
             
         self.SoundObj = Sound()    
 
         self.pushButton_playSpeech.clicked.connect(self.PlaySound)
+
+    def CloseProgram(self):
+        self.SignalCloseProgram.emit()
 
     def PlaySound(self):
         if(self.comboBox_chooseTextToSpeech.currentText().__contains__("ơn")):

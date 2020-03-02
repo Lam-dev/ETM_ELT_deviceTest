@@ -59,7 +59,6 @@ class Ui_Frame(object):
         self.comboBox_chooseTextToSpeech.setObjectName("comboBox_chooseTextToSpeech")
         self.comboBox_chooseTextToSpeech.addItem("")
         self.comboBox_chooseTextToSpeech.addItem("")
-        
         self.pushButton_playSpeech = QtWidgets.QPushButton(self.frame_2)
         self.pushButton_playSpeech.setGeometry(QtCore.QRect(88, 72, 151, 73))
         self.pushButton_playSpeech.setObjectName("pushButton_playSpeech")
@@ -72,7 +71,7 @@ class Ui_Frame(object):
         self.label_forShowCamera.setGeometry(QtCore.QRect(22, 10, 397, 257))
         self.label_forShowCamera.setObjectName("label_forShowCamera")
         self.frame_4 = QtWidgets.QFrame(Frame)
-        self.frame_4.setGeometry(QtCore.QRect(470, 196, 325, 279))
+        self.frame_4.setGeometry(QtCore.QRect(470, 196, 325, 211))
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
@@ -88,16 +87,19 @@ class Ui_Frame(object):
         self.label_forShowMAC.setText("")
         self.label_forShowMAC.setObjectName("label_forShowMAC")
         self.label_7 = QtWidgets.QLabel(self.frame_4)
-        self.label_7.setGeometry(QtCore.QRect(12, 114, 117, 17))
+        self.label_7.setGeometry(QtCore.QRect(12, 108, 117, 17))
         self.label_7.setStyleSheet("color: rgb(0, 0, 127);\n"
 "font: 75 bold 18pt \"Ubuntu\";")
         self.label_7.setObjectName("label_7")
         self.label_forShowSerial = QtWidgets.QLabel(self.frame_4)
-        self.label_forShowSerial.setGeometry(QtCore.QRect(10, 158, 301, 47))
+        self.label_forShowSerial.setGeometry(QtCore.QRect(10, 146, 301, 47))
         self.label_forShowSerial.setStyleSheet("color: rgb(209, 0, 0);\n"
 "font: 75 bold 18pt \"Ubuntu\";")
         self.label_forShowSerial.setText("")
         self.label_forShowSerial.setObjectName("label_forShowSerial")
+        self.pushButton_close = QtWidgets.QPushButton(Frame)
+        self.pushButton_close.setGeometry(QtCore.QRect(712, 410, 77, 65))
+        self.pushButton_close.setObjectName("pushButton_close")
 
         self.retranslateUi(Frame)
         QtCore.QMetaObject.connectSlotsByName(Frame)
@@ -118,6 +120,7 @@ class Ui_Frame(object):
         self.label_forShowCamera.setText(_translate("Frame", "TextLabel"))
         self.label_5.setText(_translate("Frame", "MAC"))
         self.label_7.setText(_translate("Frame", "Serial"))
+        self.pushButton_close.setText(_translate("Frame", "Tắt"))
 
 
 if __name__ == "__main__":

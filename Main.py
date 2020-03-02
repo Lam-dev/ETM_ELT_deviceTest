@@ -23,7 +23,7 @@ class MainWindow(QMainWindow):
 
         self.frameContain = QtWidgets.QFrame(self.centralWidget)
         self.mainScreenObj = MainScreen(self.frameContain)
-
+        self.mainScreenObj.SignalCloseProgram.connect(self.close)
 def main():
     app = QApplication(sys.argv)
     window = MainWindow()
