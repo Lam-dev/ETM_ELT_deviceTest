@@ -7,6 +7,9 @@ from        PyQt5           import QtWidgets, QtGui, QtCore
 from        PIL             import Image, ImageQt
 import      getmac
 from        Sound.OrangePiSound   import Sound
+import      subprocess
+from        subprocess  import Popen, PIPE
+
 
 class MainScreen(Ui_Frame, QObject):
     SignalCloseProgram = pyqtSignal()
@@ -24,11 +27,13 @@ class MainScreen(Ui_Frame, QObject):
         self.FGPobj.SignalNotFGPsensor.connect(self.NotFGPsensor)
 
         self.ShowMacAndSerial()
+        self.GetDS1307time()
 
         self.pushButton_addFGP.clicked.connect(self.GetAndSaveFGP)
         self.pushButton_findFGP.clicked.connect(self.FindFGP)
         self.pushButton_deleteFGP.clicked.connect(self.DeleteFGP)
         self.pushButton_close.clicked.connect(self.CloseProgram)
+        self.pushButton.clicked.connect(self.GetDS1307time)
             
         self.SoundObj = Sound()    
 
@@ -72,4 +77,28 @@ class MainScreen(Ui_Frame, QObject):
         self.FGPobj.BatLayVanTayDangNhap()
 
     def ShowMacAndSerial(self):
-        self.label_forShowMAC.setText(getmac.get_mac_address())
+        macString = getmac.get_mac_address()
+        if(macString == ""):
+            self.label_forShowMAC.setText("Kết nối LAN")
+            return
+        self.label_forShowMAC.setText(macString)
+        lstByteStrType = macString.split(":")
+        lstByteMacIntType = [int(elem, 16) for elem in lstByteStrType]
+        seriString = ""
+        for i in range(3, 6):
+            seriElem = lstByteMacIntType[i] ^ 69
+            seriString += hex(seriElem)[2:]
+
+        self.label_forShowSerial.setText(seriString)
+    
+    def GetDS1307time(self):
+        try:
+            proc = Popen("hwclock -f /dev/rtc0 -r".split(" "),stdout=PIPE)
+            response ,err= proc.communicate()
+            timeStringArr = []
+            for i in response:
+                timeStringArr.append(chr(i))
+                timeString = ''.join(timeStringArr)
+            self.label_forShowTimeFromDS1307.setText(timeString)
+        except:
+            self.label_forShowTimeFromDS1307.setText("Lỗi")
