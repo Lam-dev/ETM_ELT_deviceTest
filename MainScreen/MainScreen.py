@@ -84,12 +84,19 @@ class MainScreen(Ui_Frame, QObject):
         self.label_forShowMAC.setText(macString)
         lstByteStrType = macString.split(":")
         lstByteMacIntType = [int(elem, 16) for elem in lstByteStrType]
-        seriString = ""
+        seriString = "  "
         for i in range(3, 6):
             seriElem = lstByteMacIntType[i] ^ 69
-            seriString += hex(seriElem)[2:]
+            seriString += self.__ToHex8bit(seriElem)
 
         self.label_forShowSerial.setText(seriString)
+    
+    def __ToHex8bit(self, number):
+        hexStr = hex(number)[2:]
+        if(len(hexStr) == 1):
+            return "0"+ hexStr
+        else:
+            return hexStr
     
     def GetDS1307time(self):
         try:
