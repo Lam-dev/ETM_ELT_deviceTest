@@ -9,6 +9,8 @@ import      getmac
 from        Sound.OrangePiSound   import Sound
 import      subprocess
 from        subprocess  import Popen, PIPE
+import      random
+from      WriteRFcard.ControlRFIDmodule     import   ControlRFIDmudule
 
 
 class MainScreen(Ui_Frame, QObject):
@@ -34,10 +36,45 @@ class MainScreen(Ui_Frame, QObject):
         self.pushButton_deleteFGP.clicked.connect(self.DeleteFGP)
         self.pushButton_close.clicked.connect(self.CloseProgram)
         self.pushButton.clicked.connect(self.GetDS1307time)
+        self.button_writeCard.clicked.connect(self.WriteRandomNumberToCard)
+        self.button_readMac.clicked.connect(self.ShowMacAndSerial)
             
         self.SoundObj = Sound()    
 
         self.pushButton_playSpeech.clicked.connect(self.PlaySound)
+        self.rfModuleObj = ControlRFIDmudule()
+        self.rfModuleObj.SignalDataReadInCardByteArray.connect(self.ShowDataWrited)
+        self.rfModuleObj.SignalDataReadInCardStr.connect(self.CompareReadData)
+        self.rfModuleObj.SignalNotConnectUART.connect(lambda: self.label_forShowCardData.setText("Không có kết nối uart"))
+        #self.rfModuleObj.SignalWritedNumber.connect()
+        self.randomNum = str
+
+        
+
+    def CompareReadData(self, strData):
+        try:
+            if((strData == self.randomNum) & (len(strData) > 5)):
+                self.SoundObj.ThreadPlayXinCamOn()
+
+            else:
+                self.SoundObj.ThreadPlayVuiLongThuLai()
+        except:
+            pass
+
+
+
+    def ShowDataWrited(self, data):
+        self.label_forShowCardData.setText(str(data))
+
+    def WriteRandomNumberToCard(self):
+        self.randomNum = self.CreateRandomNumberWriteToCard()
+        self.label_showRandomNumber.setText(str(self.randomNum))
+        self.rfModuleObj.SetIDcarNumberToWriteToRFcard(self.randomNum)
+        self.rfModuleObj.StartWriteIDcardNumberToRFcard()
+
+    def CreateRandomNumberWriteToCard(self):
+        strNumber = str(random.randint(10000000, 99999999))
+        return strNumber
 
     def CloseProgram(self):
         self.SignalCloseProgram.emit()

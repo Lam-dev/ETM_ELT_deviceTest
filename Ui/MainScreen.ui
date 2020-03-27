@@ -38,8 +38,13 @@
      <x>4</x>
      <y>4</y>
      <width>405</width>
-     <height>189</height>
+     <height>105</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 170, 255, 70);
+border-style:solid;
+border-radius:5px;</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -47,52 +52,17 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QComboBox" name="comboBox_choseConnectForFGPsensor">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>6</y>
-      <width>207</width>
-      <height>43</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>UART1</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>UART2</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>UART3</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>8</x>
-      <y>16</y>
-      <width>229</width>
-      <height>19</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Kết nối cảm biến vân tay</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_addFGP">
     <property name="geometry">
      <rect>
-      <x>6</x>
-      <y>58</y>
-      <width>125</width>
-      <height>59</height>
+      <x>8</x>
+      <y>6</y>
+      <width>111</width>
+      <height>47</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(226, 226, 169);</string>
     </property>
     <property name="text">
      <string>Lấy vân tay </string>
@@ -101,15 +71,16 @@
    <widget class="QLabel" name="label_forShowFGPnotify">
     <property name="geometry">
      <rect>
-      <x>12</x>
-      <y>130</y>
+      <x>6</x>
+      <y>58</y>
       <width>371</width>
-      <height>51</height>
+      <height>39</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 132, 0);
-font: 75 bold 12pt &quot;Ubuntu&quot;;</string>
+font: 75 bold 12pt &quot;Ubuntu&quot;;
+background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string/>
@@ -118,11 +89,14 @@ font: 75 bold 12pt &quot;Ubuntu&quot;;</string>
    <widget class="QPushButton" name="pushButton_findFGP">
     <property name="geometry">
      <rect>
-      <x>138</x>
-      <y>58</y>
-      <width>125</width>
-      <height>59</height>
+      <x>140</x>
+      <y>6</y>
+      <width>103</width>
+      <height>47</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(226, 226, 169);</string>
     </property>
     <property name="text">
      <string>Thử vân tay</string>
@@ -131,11 +105,14 @@ font: 75 bold 12pt &quot;Ubuntu&quot;;</string>
    <widget class="QPushButton" name="pushButton_deleteFGP">
     <property name="geometry">
      <rect>
-      <x>272</x>
-      <y>58</y>
-      <width>125</width>
-      <height>59</height>
+      <x>274</x>
+      <y>6</y>
+      <width>101</width>
+      <height>47</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(226, 226, 169);</string>
     </property>
     <property name="text">
      <string>Xóa vân tay</string>
@@ -145,11 +122,16 @@ font: 75 bold 12pt &quot;Ubuntu&quot;;</string>
   <widget class="QFrame" name="frame_2">
    <property name="geometry">
     <rect>
-     <x>414</x>
-     <y>4</y>
-     <width>379</width>
-     <height>143</height>
+     <x>4</x>
+     <y>114</y>
+     <width>405</width>
+     <height>83</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 170, 255, 70);
+border-style:solid;
+border-radius:5px;</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -160,11 +142,14 @@ font: 75 bold 12pt &quot;Ubuntu&quot;;</string>
    <widget class="QComboBox" name="comboBox_chooseTextToSpeech">
     <property name="geometry">
      <rect>
-      <x>2</x>
-      <y>2</y>
-      <width>321</width>
-      <height>53</height>
+      <x>4</x>
+      <y>22</y>
+      <width>241</width>
+      <height>37</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(226, 226, 169);</string>
     </property>
     <item>
      <property name="text">
@@ -180,11 +165,14 @@ font: 75 bold 12pt &quot;Ubuntu&quot;;</string>
    <widget class="QPushButton" name="pushButton_playSpeech">
     <property name="geometry">
      <rect>
-      <x>88</x>
-      <y>58</y>
-      <width>151</width>
-      <height>73</height>
+      <x>262</x>
+      <y>16</y>
+      <width>115</width>
+      <height>49</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(226, 226, 169);</string>
     </property>
     <property name="text">
      <string>Phát</string>
@@ -195,10 +183,15 @@ font: 75 bold 12pt &quot;Ubuntu&quot;;</string>
    <property name="geometry">
     <rect>
      <x>4</x>
-     <y>196</y>
+     <y>204</y>
      <width>405</width>
-     <height>279</height>
+     <height>271</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 170, 255, 70);
+border-style:solid;
+border-radius:5px;</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -210,7 +203,7 @@ font: 75 bold 12pt &quot;Ubuntu&quot;;</string>
     <property name="geometry">
      <rect>
       <x>12</x>
-      <y>10</y>
+      <y>8</y>
       <width>371</width>
       <height>257</height>
      </rect>
@@ -223,11 +216,16 @@ font: 75 bold 12pt &quot;Ubuntu&quot;;</string>
   <widget class="QFrame" name="frame_4">
    <property name="geometry">
     <rect>
-     <x>412</x>
-     <y>152</y>
+     <x>414</x>
+     <y>4</y>
      <width>379</width>
      <height>131</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 170, 255, 70);
+border-style:solid;
+border-radius:5px;</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -245,7 +243,8 @@ font: 75 bold 12pt &quot;Ubuntu&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 127);
+     <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 127);
 font: 57 bold 18pt &quot;Ubuntu&quot;;</string>
     </property>
     <property name="text">
@@ -257,7 +256,7 @@ font: 57 bold 18pt &quot;Ubuntu&quot;;</string>
      <rect>
       <x>108</x>
       <y>6</y>
-      <width>259</width>
+      <width>215</width>
       <height>47</height>
      </rect>
     </property>
@@ -280,7 +279,8 @@ font: 75 bold 18pt &quot;Ubuntu&quot;;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 127);
-font: 75 bold 18pt &quot;Ubuntu&quot;;</string>
+font: 75 bold 18pt &quot;Ubuntu&quot;;
+background-color: rgba(255, 255, 255, 0);</string>
     </property>
     <property name="text">
      <string>Serial</string>
@@ -291,7 +291,7 @@ font: 75 bold 18pt &quot;Ubuntu&quot;;</string>
      <rect>
       <x>108</x>
       <y>62</y>
-      <width>255</width>
+      <width>217</width>
       <height>47</height>
      </rect>
     </property>
@@ -303,15 +303,34 @@ font: 75 bold 18pt &quot;Ubuntu&quot;;</string>
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="button_readMac">
+    <property name="geometry">
+     <rect>
+      <x>328</x>
+      <y>34</y>
+      <width>49</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(226, 226, 169);</string>
+    </property>
+    <property name="text">
+     <string>Đọc</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QPushButton" name="pushButton_close">
    <property name="geometry">
     <rect>
-     <x>718</x>
+     <x>716</x>
      <y>396</y>
-     <width>77</width>
-     <height>65</height>
+     <width>79</width>
+     <height>73</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(226, 226, 169);</string>
    </property>
    <property name="text">
     <string>Tắt</string>
@@ -320,11 +339,16 @@ font: 75 bold 18pt &quot;Ubuntu&quot;;</string>
   <widget class="QFrame" name="frame_5">
    <property name="geometry">
     <rect>
-     <x>412</x>
-     <y>294</y>
+     <x>416</x>
+     <y>140</y>
      <width>297</width>
-     <height>181</height>
+     <height>125</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 170, 255, 70);
+border-style:solid;
+border-radius:5px;</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -332,7 +356,7 @@ font: 75 bold 18pt &quot;Ubuntu&quot;;</string>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -343,7 +367,8 @@ font: 75 bold 18pt &quot;Ubuntu&quot;;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 127);
-font: 57 bold 18pt &quot;Ubuntu&quot;;</string>
+font: 57 bold 18pt &quot;Ubuntu&quot;;
+background-color: rgba(255, 255, 255, 0);</string>
     </property>
     <property name="text">
      <string>Giờ DS1307</string>
@@ -354,6 +379,103 @@ font: 57 bold 18pt &quot;Ubuntu&quot;;</string>
      <rect>
       <x>10</x>
       <y>44</y>
+      <width>281</width>
+      <height>73</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(127, 0, 0);
+font: 57 bold 14pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>714</x>
+     <y>140</y>
+     <width>79</width>
+     <height>53</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(226, 226, 169);</string>
+   </property>
+   <property name="text">
+    <string>Đọc giờ</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton__writeTime">
+   <property name="geometry">
+    <rect>
+     <x>714</x>
+     <y>202</y>
+     <width>79</width>
+     <height>53</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(226, 226, 169);</string>
+   </property>
+   <property name="text">
+    <string>Ghi giờ</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_6">
+   <property name="geometry">
+    <rect>
+     <x>416</x>
+     <y>270</y>
+     <width>297</width>
+     <height>199</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 170, 255, 70);
+border-style:solid;
+border-radius:5px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>6</y>
+      <width>213</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 127);
+font: 57 bold 18pt &quot;Ubuntu&quot;;
+background-color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Thẻ</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_forShowCardData">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>48</y>
       <width>281</width>
       <height>75</height>
      </rect>
@@ -375,17 +497,36 @@ font: 57 bold 14pt &quot;Ubuntu&quot;;</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="button_writeCard">
     <property name="geometry">
      <rect>
-      <x>112</x>
-      <y>120</y>
-      <width>91</width>
-      <height>53</height>
+      <x>12</x>
+      <y>132</y>
+      <width>89</width>
+      <height>55</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(226, 226, 169);</string>
+    </property>
     <property name="text">
-     <string>Đọc giờ</string>
+     <string>Ghi thẻ</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_showRandomNumber">
+    <property name="geometry">
+     <rect>
+      <x>114</x>
+      <y>136</y>
+      <width>175</width>
+      <height>47</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>

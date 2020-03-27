@@ -68,7 +68,7 @@ class Fingerprint(QObject):
                 self.SignalNotFGPsensor.emit()
                 self.fingerprintObj = PyFingerprint(self.port, self.baudRate, self.address, self.password)
                 self.fingerprintObj.verifyPassword()
-        except NameError:
+        except:
             self.SignalNotFGPsensor.emit()
             self.fingerprintObj = False
 
