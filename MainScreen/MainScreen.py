@@ -114,19 +114,22 @@ class MainScreen(Ui_Frame, QObject):
         self.FGPobj.BatLayVanTayDangNhap()
 
     def ShowMacAndSerial(self):
-        macString = getmac.get_mac_address()
-        if(macString == ""):
-            self.label_forShowMAC.setText("Kết nối LAN")
-            return
-        self.label_forShowMAC.setText(macString)
-        lstByteStrType = macString.split(":")
-        lstByteMacIntType = [int(elem, 16) for elem in lstByteStrType]
-        seriString = "  "
-        for i in range(3, 6):
-            seriElem = lstByteMacIntType[i] ^ 69
-            seriString += self.__ToHex8bit(seriElem)
+        try:
+            macString = getmac.get_mac_address()
+            if(macString == ""):
+                self.label_forShowMAC.setText("Kết nối LAN")
+                return
+            self.label_forShowMAC.setText(macString)
+            lstByteStrType = macString.split(":")
+            lstByteMacIntType = [int(elem, 16) for elem in lstByteStrType]
+            seriString = "  "
+            for i in range(3, 6):
+                seriElem = lstByteMacIntType[i] ^ 69
+                seriString += self.__ToHex8bit(seriElem)
 
-        self.label_forShowSerial.setText(seriString)
+            self.label_forShowSerial.setText(seriString)
+        except:
+            self.label_forShowMAC.setText("Kết nối LAN")
     
     def __ToHex8bit(self, number):
         hexStr = hex(number)[2:]
