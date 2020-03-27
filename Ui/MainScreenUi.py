@@ -85,31 +85,31 @@ class Ui_Frame(object):
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
         self.label_5 = QtWidgets.QLabel(self.frame_4)
-        self.label_5.setGeometry(QtCore.QRect(14, 22, 103, 17))
+        self.label_5.setGeometry(QtCore.QRect(14, 14, 103, 17))
         self.label_5.setStyleSheet("background-color: rgba(255, 255, 255, 0);\n"
 "color: rgb(0, 0, 127);\n"
 "font: 57 bold 18pt \"Ubuntu\";")
         self.label_5.setObjectName("label_5")
         self.label_forShowMAC = QtWidgets.QLabel(self.frame_4)
-        self.label_forShowMAC.setGeometry(QtCore.QRect(108, 6, 215, 47))
+        self.label_forShowMAC.setGeometry(QtCore.QRect(108, 2, 263, 47))
         self.label_forShowMAC.setStyleSheet("color: rgb(209, 0, 0);\n"
 "font: 75 bold 18pt \"Ubuntu\";")
         self.label_forShowMAC.setText("")
         self.label_forShowMAC.setObjectName("label_forShowMAC")
         self.label_7 = QtWidgets.QLabel(self.frame_4)
-        self.label_7.setGeometry(QtCore.QRect(12, 78, 83, 17))
+        self.label_7.setGeometry(QtCore.QRect(12, 58, 83, 17))
         self.label_7.setStyleSheet("color: rgb(0, 0, 127);\n"
 "font: 75 bold 18pt \"Ubuntu\";\n"
 "background-color: rgba(255, 255, 255, 0);")
         self.label_7.setObjectName("label_7")
         self.label_forShowSerial = QtWidgets.QLabel(self.frame_4)
-        self.label_forShowSerial.setGeometry(QtCore.QRect(108, 62, 217, 47))
+        self.label_forShowSerial.setGeometry(QtCore.QRect(108, 50, 263, 47))
         self.label_forShowSerial.setStyleSheet("color: rgb(209, 0, 0);\n"
 "font: 75 bold 18pt \"Ubuntu\";")
         self.label_forShowSerial.setText("")
         self.label_forShowSerial.setObjectName("label_forShowSerial")
         self.button_readMac = QtWidgets.QPushButton(self.frame_4)
-        self.button_readMac.setGeometry(QtCore.QRect(328, 34, 49, 55))
+        self.button_readMac.setGeometry(QtCore.QRect(22, 82, 43, 41))
         self.button_readMac.setStyleSheet("background-color: rgb(226, 226, 169);")
         self.button_readMac.setObjectName("button_readMac")
         self.pushButton_close = QtWidgets.QPushButton(Frame)
