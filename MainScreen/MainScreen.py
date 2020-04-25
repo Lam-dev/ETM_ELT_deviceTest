@@ -38,6 +38,8 @@ class MainScreen(Ui_Frame, QObject):
         self.pushButton.clicked.connect(self.GetDS1307time)
         self.button_writeCard.clicked.connect(self.WriteRandomNumberToCard)
         self.button_readMac.clicked.connect(self.ShowMacAndSerial)
+
+        self.pushButton__writeTime.clicked.connect(self.WriteTimeFromSystem)
             
         self.SoundObj = Sound()    
 
@@ -49,7 +51,7 @@ class MainScreen(Ui_Frame, QObject):
         #self.rfModuleObj.SignalWritedNumber.connect()
         self.randomNum = str
 
-        
+
 
     def CompareReadData(self, strData):
         try:
@@ -140,7 +142,7 @@ class MainScreen(Ui_Frame, QObject):
     
     def GetDS1307time(self):
         try:
-            proc = Popen("hwclock -f /dev/rtc0 -r".split(" "),stdout=PIPE)
+            proc = Popen("hwclock -f /dev/rtc1 -r".split(" "),stdout=PIPE)
             response ,err= proc.communicate()
             timeStringArr = []
             for i in response:
@@ -149,3 +151,16 @@ class MainScreen(Ui_Frame, QObject):
             self.label_forShowTimeFromDS1307.setText(timeString)
         except:
             self.label_forShowTimeFromDS1307.setText("Lỗi")
+
+    
+    def WriteTimeFromSystem(self):
+        try:
+            proc = Popen("hwclock -f /dev/rtc1 -w".split(" "),stdout=PIPE)
+            response ,err= proc.communicate()
+            timeStringArr = []
+            for i in response:
+                timeStringArr.append(chr(i))
+                timeString = ''.join(timeStringArr)
+            self.label_forShowTimeFromDS1307.setText("Đã ghi giờ")
+        except:
+            self.label_forShowTimeFromDS1307.setText("Lỗi ghi giờ")
