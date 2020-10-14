@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'MainScreen.ui'
 #
-# Created by: PyQt5 UI code generator 5.13.0
+# Created by: PyQt5 UI code generator 5.14.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -48,7 +48,7 @@ class Ui_Frame(object):
         self.pushButton_deleteFGP.setStyleSheet("background-color: rgb(226, 226, 169);")
         self.pushButton_deleteFGP.setObjectName("pushButton_deleteFGP")
         self.frame_2 = QtWidgets.QFrame(Frame)
-        self.frame_2.setGeometry(QtCore.QRect(4, 114, 405, 83))
+        self.frame_2.setGeometry(QtCore.QRect(4, 114, 405, 89))
         self.frame_2.setStyleSheet("background-color: rgba(0, 170, 255, 70);\n"
 "border-style:solid;\n"
 "border-radius:5px;")
@@ -56,17 +56,25 @@ class Ui_Frame(object):
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.comboBox_chooseTextToSpeech = QtWidgets.QComboBox(self.frame_2)
-        self.comboBox_chooseTextToSpeech.setGeometry(QtCore.QRect(4, 22, 241, 37))
+        self.comboBox_chooseTextToSpeech.setGeometry(QtCore.QRect(4, 8, 275, 37))
         self.comboBox_chooseTextToSpeech.setStyleSheet("background-color: rgb(226, 226, 169);")
         self.comboBox_chooseTextToSpeech.setObjectName("comboBox_chooseTextToSpeech")
         self.comboBox_chooseTextToSpeech.addItem("")
         self.comboBox_chooseTextToSpeech.addItem("")
         self.pushButton_playSpeech = QtWidgets.QPushButton(self.frame_2)
-        self.pushButton_playSpeech.setGeometry(QtCore.QRect(262, 16, 115, 49))
+        self.pushButton_playSpeech.setGeometry(QtCore.QRect(284, 2, 115, 49))
         self.pushButton_playSpeech.setStyleSheet("background-color: rgb(226, 226, 169);")
         self.pushButton_playSpeech.setObjectName("pushButton_playSpeech")
+        self.horizontalSlider_changeValue = QtWidgets.QSlider(self.frame_2)
+        self.horizontalSlider_changeValue.setGeometry(QtCore.QRect(4, 54, 275, 29))
+        self.horizontalSlider_changeValue.setOrientation(QtCore.Qt.Horizontal)
+        self.horizontalSlider_changeValue.setObjectName("horizontalSlider_changeValue")
+        self.pushButton_2 = QtWidgets.QPushButton(self.frame_2)
+        self.pushButton_2.setGeometry(QtCore.QRect(288, 56, 99, 27))
+        self.pushButton_2.setStyleSheet("background-color: rgb(226, 226, 169);")
+        self.pushButton_2.setObjectName("pushButton_2")
         self.frame_3 = QtWidgets.QFrame(Frame)
-        self.frame_3.setGeometry(QtCore.QRect(4, 204, 405, 271))
+        self.frame_3.setGeometry(QtCore.QRect(4, 208, 405, 267))
         self.frame_3.setStyleSheet("background-color: rgba(0, 170, 255, 70);\n"
 "border-style:solid;\n"
 "border-radius:5px;")
@@ -74,7 +82,7 @@ class Ui_Frame(object):
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
         self.label_forShowCamera = QtWidgets.QLabel(self.frame_3)
-        self.label_forShowCamera.setGeometry(QtCore.QRect(12, 8, 371, 257))
+        self.label_forShowCamera.setGeometry(QtCore.QRect(12, 6, 371, 257))
         self.label_forShowCamera.setObjectName("label_forShowCamera")
         self.frame_4 = QtWidgets.QFrame(Frame)
         self.frame_4.setGeometry(QtCore.QRect(414, 4, 379, 131))
@@ -192,6 +200,7 @@ class Ui_Frame(object):
         self.comboBox_chooseTextToSpeech.setItemText(0, _translate("Frame", "Xin cảm ơn"))
         self.comboBox_chooseTextToSpeech.setItemText(1, _translate("Frame", "Xin vui lòng thử lại"))
         self.pushButton_playSpeech.setText(_translate("Frame", "Phát"))
+        self.pushButton_2.setText(_translate("Frame", "startAud"))
         self.label_forShowCamera.setText(_translate("Frame", "TextLabel"))
         self.label_5.setText(_translate("Frame", "MAC"))
         self.label_7.setText(_translate("Frame", "Serial"))

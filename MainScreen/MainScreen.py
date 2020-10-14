@@ -10,6 +10,7 @@ from        Sound.OrangePiSound   import Sound
 import      subprocess
 from        subprocess  import Popen, PIPE
 import      random
+import      os
 from      WriteRFcard.ControlRFIDmodule     import   ControlRFIDmudule
 
 
@@ -40,7 +41,7 @@ class MainScreen(Ui_Frame, QObject):
         self.button_readMac.clicked.connect(self.ShowMacAndSerial)
 
         self.pushButton__writeTime.clicked.connect(self.WriteTimeFromSystem)
-            
+        self.horizontalSlider_changeValue.mouseReleaseEvent = lambda event: self.EventChangeVolume()
         self.SoundObj = Sound()    
 
         self.pushButton_playSpeech.clicked.connect(self.PlaySound)
@@ -50,8 +51,11 @@ class MainScreen(Ui_Frame, QObject):
         self.rfModuleObj.SignalNotConnectUART.connect(lambda: self.label_forShowCardData.setText("Không có kết nối uart"))
         #self.rfModuleObj.SignalWritedNumber.connect()
         self.randomNum = str
-
-
+        
+    def EventChangeVolume(self):
+        x = self.horizontalSlider_changeValue.value()
+        command = "amixer -D pulse set Master "+str(x) + "%"
+        os.system(command)
 
     def CompareReadData(self, strData):
         try:
